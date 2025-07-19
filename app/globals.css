@@ -69,8 +69,8 @@
 }
 
 @font-face {
-  font-family: 'SatansMinions';
-  src: url('../public/SATAM___.ttf') format('truetype');
+  font-family: 'SATAM';
+  src: url('/SATAM___.ttf') format('truetype');
 }
 
 .font-serif {
