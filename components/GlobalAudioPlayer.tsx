@@ -1,8 +1,10 @@
 "use client";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
+import { Skull } from "lucide-react";
 
 export default function GlobalAudioPlayer() {
   const audioRef = useRef<HTMLAudioElement>(null);
+  const [canPlay, setCanPlay] = useState(false);
 
   useEffect(() => {
     if (audioRef.current) {
@@ -10,7 +12,30 @@ export default function GlobalAudioPlayer() {
     }
   }, []);
 
+  const handlePlay = () => {
+    setCanPlay(true);
+    audioRef.current?.play();
+  };
+
   return (
-    <audio ref={audioRef} src="/depth.mp3" autoPlay loop />
+    <>
+      {!canPlay && (
+        <button
+          onClick={handlePlay}
+          className="fixed bottom-4 right-4 z-50 bg-black/80 text-purple-800 hover:text-purple-500 p-4 rounded-full shadow-lg animate-pulse transition-all duration-300"
+          aria-label="Ativar música"
+        >
+          <Skull size={36} className="drop-shadow-lg" />
+        </button>
+      )}
+      <audio
+        ref={audioRef}
+        src="/depth.mp3"
+        autoPlay={canPlay}
+        loop
+        controls={canPlay}
+        style={{ display: "none" }}
+      />
+    </>
   );
 }

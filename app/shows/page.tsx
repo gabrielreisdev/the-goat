@@ -59,7 +59,7 @@ export default function ShowsPage() {
       <div className="relative z-10 container mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ fontFamily: 'SATAM' }} className="text-6xl md:text-7xl font-bold mb-6 font-skeleta gothic-shadow">PRÓXIMOS RITUAIS</h1>
+          <h1 style={{ fontFamily: 'SATAM' }} className="text-6xl md:text-7xl font-bold mb-6 font-skeleta gothic-shadow">Proximos Rituais</h1>
           <p className="text-xl text-gray-300 font-serif italic">"Onde as almas se encontram na escuridão"</p>
         </div>
 

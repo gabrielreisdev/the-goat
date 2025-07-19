@@ -68,9 +68,14 @@
   }
 }
 
-@font-face {
+/* @font-face {
   font-family: 'SATAM';
   src: url('/SATAM___.ttf') format('truetype');
+} */
+
+@font-face {
+  font-family: 'SATAM';
+  src: url('/SATAM___.woff2') format('woff2');
 }
 
 .font-serif {

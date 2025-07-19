@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import papaBG from '../public/background-papa.png';
+import papaBG from '../public/background-papa.webp';
 
 export default function BackgroundImage() {
   return (
@@ -11,6 +11,7 @@ export default function BackgroundImage() {
         className="object-cover object-center opacity-40"
         priority
         sizes="100vw"
+        placeholder="blur"
       />
     </div>
   );
