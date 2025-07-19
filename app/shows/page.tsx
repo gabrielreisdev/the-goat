@@ -90,7 +90,7 @@ export default function ShowsPage() {
                     </div>
                   </div>
 
-                  <div className="flex flex-col items-end gap-4">
+                  <div className="flex flex-col items-start md:items-end gap-4">
                     <div
                       className={`px-4 py-2 rounded-full text-sm font-semibold ${
                         show.status === "Últimos Ingressos"

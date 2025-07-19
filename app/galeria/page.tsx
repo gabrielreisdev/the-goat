@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from 'next/image';
 import BackgroundImage from "@/components/BackgroundImage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function GaleriaPage() {
   const [filter, setFilter] = useState("Todos");
@@ -55,6 +55,15 @@ export default function GaleriaPage() {
       });
 
   const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+
+  useEffect(() => {
+    if (!modalImage) return;
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") setModalImage(null);
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [modalImage]);
 
   return (
     <div className="min-h-screen bg-black text-white">
