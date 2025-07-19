@@ -31,7 +31,7 @@ export default function ShowsPage() {
       time: "22:00",
       status: "Em Breve",
     },
-    
+
   ]
 
   return (
@@ -89,28 +89,38 @@ export default function ShowsPage() {
 
                   <div className="flex flex-col items-start md:items-end gap-4">
                     <div
-                      className={`px-4 py-2 rounded-full text-sm font-semibold ${
-                        show.status === "Últimos Ingressos"
-                          ? "bg-yellow-900/50 text-yellow-400 border border-yellow-600/50"
-                          : show.status === "Em Breve"
-                            ? "bg-gray-800/50 text-gray-400 border border-gray-600/50"
-                            : "bg-gray-800/50 text-gray-300 border border-gray-600/50"
-                      }`}
+                      className={`px-4 py-2 rounded-full text-sm font-semibold ${show.status === "Últimos Ingressos"
+                        ? "bg-yellow-900/50 text-yellow-400 border border-yellow-600/50"
+                        : show.status === "Em Breve"
+                          ? "bg-gray-800/50 text-gray-400 border border-gray-600/50"
+                          : "bg-gray-800/50 text-gray-300 border border-gray-600/50"
+                        }`}
                     >
                       {show.status}
                     </div>
 
-                    <Button
-                      className="bg-purple-800 hover:bg-purple-700 text-white px-6 py-2 font-serif border border-purple-600 shadow-lg shadow-purple-900/50 transition-all duration-300 hover:shadow-purple-700/50"
-                      disabled={show.status === "Em Breve"}
-                    >
-                    <Link href={`${show.link}`} target="_blank">
-                    <div className="flex items-center justify-center">
-                        <Ticket size={18} className="mr-2" />
-                        {show.status === "Em Breve" ? "Em Breve" : "Ingressos"}
-                    </div>
-                    </Link>
-                  </Button>
+                    {show.status === "Em Breve" ? (
+                      <Button
+                        className="bg-purple-800 hover:bg-purple-700 text-white px-6 py-2 font-serif border border-purple-600 shadow-lg shadow-purple-900/50 transition-all duration-300 hover:shadow-purple-700/50"
+                        disabled
+                      >
+                        <div className="flex items-center justify-center">
+                          <Ticket size={18} className="mr-2" />
+                          Em Breve
+                        </div>
+                      </Button>
+                    ) : (
+                      <Link href={`${show.link}`} target="_blank">
+                        <Button
+                          className="bg-purple-800 hover:bg-purple-700 text-white px-6 py-2 font-serif border border-purple-600 shadow-lg shadow-purple-900/50 transition-all duration-300 hover:shadow-purple-700/50"
+                        >
+                          <div className="flex items-center justify-center">
+                            <Ticket size={18} className="mr-2" />
+                            Ingressos
+                          </div>
+                        </Button>
+                      </Link>
+                    )}
                   </div>
                 </div>
               </CardContent>
