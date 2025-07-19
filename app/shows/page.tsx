@@ -4,10 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, MapPin, Ticket } from "lucide-react"
 import Link from "next/link"
-import papaBG from '../../public/background-papa.png';
-import Image from 'next/image';
 import BackgroundImage from "@/components/BackgroundImage";
-import { useRef, useEffect } from "react";
 
 export default function ShowsPage() {
 
@@ -122,7 +119,7 @@ export default function ShowsPage() {
         </div>
 
         {/* Call to action */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-16 mb-8  ">
           <p className="text-lg text-gray-400 mb-6 font-serif italic">
             "Junte-se ao ritual. Sinta o poder da música sombria."
           </p>
