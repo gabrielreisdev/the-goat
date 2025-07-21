@@ -8,7 +8,7 @@ export default function HomePage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background with overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-gray-950/20 via-black to-black">
+      <div className="absolute inset-0 bg-gradient-to-b from-gray-950/10 via-black to-black">
       <BackgroundImage />
       <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
       </div>
@@ -40,7 +40,7 @@ export default function HomePage() {
 
         {/* Main title */}
         <div className="">
-          <Image className="w-1/2 md:w-1/3 flex flex-row mx-auto justify-center items-center" src={goatLogo} alt="Imagem" />
+          <Image className="w-1/2 md:w-1/3 flex flex-row mx-auto justify-center items-center mb-48" src={goatLogo} alt="Imagem" />
         </div>
 
         {/* Subtitle */}

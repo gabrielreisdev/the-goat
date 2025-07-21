@@ -3,7 +3,7 @@ import papaBG from '../public/background-papa.webp';
 
 export default function BackgroundImage() {
   return (
-    <div className="absolute inset-0 w-full h-full">
+    <div className="">
       <Image
         src={papaBG}
         alt="Papa"

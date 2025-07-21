@@ -48,13 +48,13 @@ export default function GaleriaPage() {
   const filteredImages = filter === "Todos"
     ? images
     : images.filter((img) => {
-        if (filter === "Ensaios") return img.category === "Ensaio";
-        if (filter === "Bastidores") return img.category === "Bastidores";
-        if (filter === "Shows") return img.category === "Show";
-        return true;
-      });
+      if (filter === "Ensaios") return img.category === "Ensaio";
+      if (filter === "Bastidores") return img.category === "Bastidores";
+      if (filter === "Shows") return img.category === "Show";
+      return true;
+    });
 
-  const [modalImage, setModalImage] = useState<{src: string, alt: string} | null>(null);
+  const [modalImage, setModalImage] = useState<{ src: string, alt: string } | null>(null);
 
   useEffect(() => {
     if (!modalImage) return;
@@ -69,7 +69,7 @@ export default function GaleriaPage() {
     <div className="min-h-screen bg-black text-white">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-950/10 via-black to-black">
-      <BackgroundImage />
+        <BackgroundImage />
       </div>
 
       {/* Navigation */}
