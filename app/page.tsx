@@ -10,11 +10,10 @@ export default function HomePage() {
       {/* Background with overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-950/10 via-black to-black">
       <BackgroundImage />
-      <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/50" />
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 p-6 flex justify-center items-center">
+      <nav className="relative z-10 p-6 flex justify-center items-center border-b bg-black border-gray-800/30">
         <div className="flex gap-6">
           <Link
             href="/"
