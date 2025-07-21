@@ -8,7 +8,7 @@ export default function BackgroundImage() {
         src={papaBG}
         alt="Papa"
         fill
-        className="object-cover object-center opacity-40"
+        className="object-cover object-center opacity-80"
         priority
         sizes="100vw"
         placeholder="blur"
