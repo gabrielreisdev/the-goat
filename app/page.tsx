@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import goatLogo from '../public/goat-logo.png';
+import goatLogo from '../public/goat-logo.webp';
 import Image from 'next/image';
 import Link from "next/link";
 import BackgroundImage from "@/components/BackgroundImage";
@@ -40,7 +40,7 @@ export default function HomePage() {
 
         {/* Main title */}
         <div className="">
-          <Image className="w-1/2 md:w-1/3 flex flex-row mx-auto justify-center items-center mb-48" src={goatLogo} alt="Imagem" />
+          <Image className="w-1/2 md:w-1/3 flex flex-row mx-auto justify-center items-center" src={goatLogo} alt="Imagem" />
         </div>
 
         {/* Subtitle */}
