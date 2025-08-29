@@ -23,26 +23,87 @@ export default function GaleriaPage() {
       alt: "Show na Casa da Felicidade",
       category: "Show",
     },
-    // {
-    //   src: "/placeholder.svg?height=400&width=600",
-    //   alt: "Instrumentos Sagrados",
-    //   category: "Bastidores",
-    // },
-    // {
-    //   src: "/placeholder.svg?height=400&width=600",
-    //   alt: "Sessão Fotográfica",
-    //   category: "Ensaio",
-    // },
-    // {
-    //   src: "/placeholder.svg?height=400&width=600",
-    //   alt: "Preparação do Altar",
-    //   category: "Bastidores",
-    // },
-    // {
-    //   src: "/placeholder.svg?height=400&width=600",
-    //   alt: "Sound Check Ritual",
-    //   category: "Ensaio",
-    // },
+    {
+      src: "/14.jpg?height=400&width=600",
+      alt: "Bastodpres",
+      category: "Bastidores",
+    },
+    {
+      src: "/6.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/8.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/10.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/5.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/9.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/7.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/11.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/12.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/15.jpg?height=400&width=600",
+      alt: "Bastidores",
+      category: "Bastidores",
+    },
+    {
+      src: "/16.jpg?height=400&width=600",
+      alt: "Ensaio",
+      category: "Ensaio",
+    },
+    {
+      src: "/17.jpg?height=400&width=600",
+      alt: "Ensaio",
+      category: "Ensaio",
+    },
+    {
+      src: "/18.jpg?height=400&width=600",
+      alt: "Ensaio",
+      category: "Ensaio",
+    },
+    {
+      src: "/20.jpg?height=400&width=600",
+      alt: "Ensaio",
+      category: "Ensaio",
+    },
+    {
+      src: "/21.jpg?height=400&width=600",
+      alt: "Ensaio",
+      category: "Ensaio",
+    },
+    {
+      src: "/19.jpg?height=400&width=600",
+      alt: "Ensaio",
+      category: "Ensaio",
+    },
+
   ]
 
   const filteredImages = filter === "Todos"
@@ -83,6 +144,12 @@ export default function GaleriaPage() {
           </Link>
           <Link href="/galeria" className="text-purple-600 font-serif font-bold">
             Galeria
+          </Link>
+          <Link href="/goaTV" className="text-white hover:text-purple-500 font-serif">
+            GoaTV
+          </Link>
+          <Link href="/merch" className="text-white hover:text-purple-500 font-serif">
+            Merch
           </Link>
         </div>
       </nav>

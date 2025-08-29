@@ -30,6 +30,12 @@ export default function HomePage() {
           <Link href="/galeria" className="text-white hover:text-purple-500 font-serif">
             Galeria
           </Link>
+          <Link href="/goaTV" className="text-white hover:text-purple-500 font-serif">
+            GoaTV
+          </Link>
+          <Link href="/merch" className="text-white hover:text-purple-500 font-serif">
+            Merch
+          </Link>
         </div>
       </nav>
 

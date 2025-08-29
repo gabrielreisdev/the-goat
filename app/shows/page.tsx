@@ -1,38 +1,36 @@
 "use client";
 
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, MapPin, Ticket } from "lucide-react"
-import Link from "next/link"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Calendar, MapPin, Ticket } from "lucide-react";
+import Link from "next/link";
 import BackgroundImage from "@/components/BackgroundImage";
 
 export default function ShowsPage() {
-
   const shows = [
-    {
-      link: "https://partik.com.br/ghost-e-soad",
-      date: "15 AGO 2025",
-      venue: "30 Segundos Bar",
-      city: "Salvador, BA",
-      time: "22:00",
-      status: "Ingressos Disponíveis",
-    },
-    {
-      date: "À Definir",
-      venue: "30 Segundos Bar",
-      city: "Salvador, BA",
-      time: "22:00",
-      status: "Em Breve",
-    },
+    // {
+    //   link: "https://partik.com.br/ghost-e-soad",
+    //   date: "15 AGO 2025",
+    //   venue: "30 Segundos Bar",
+    //   city: "Salvador, BA",
+    //   time: "22:00",
+    //   status: "Ingressos Disponíveis",
+    // },
     {
       date: "À Definir",
       venue: "Casa Noise",
       city: "Feira de Santana, BA",
-      time: "22:00",
+      // time: "22:00",
       status: "Em Breve",
     },
-
-  ]
+    {
+      date: "À Definir",
+      venue: "30 Segundos Bar",
+      city: "Salvador, BA",
+      // time: "22:00",
+      status: "Em Breve",
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-black text-white">
@@ -44,14 +42,35 @@ export default function ShowsPage() {
       {/* Navigation */}
       <nav className="relative z-10 p-6 flex justify-center items-center border-b bg-black border-gray-800/30">
         <div className="flex gap-6">
-          <Link href="/" className="text-white hover:text-purple-500 transition-colors font-serif">
+          <Link
+            href="/"
+            className="text-white hover:text-purple-500 transition-colors font-serif"
+          >
             Início
           </Link>
-          <Link href="/shows" className="text-purple-600 transition-colors font-serif font-bold">
+          <Link
+            href="/shows"
+            className="text-purple-600 transition-colors font-serif font-bold"
+          >
             Shows
           </Link>
-          <Link href="/galeria" className="text-white hover:text-purple-500 transition-colors font-serif">
+          <Link
+            href="/galeria"
+            className="text-white hover:text-purple-500 transition-colors font-serif"
+          >
             Galeria
+          </Link>
+          <Link
+            href="/goaTV"
+            className="text-white hover:text-purple-500 font-serif"
+          >
+            GoaTV
+          </Link>
+          <Link
+            href="/merch"
+            className="text-white hover:text-purple-500 font-serif"
+          >
+            Merch
           </Link>
         </div>
       </nav>
@@ -59,8 +78,15 @@ export default function ShowsPage() {
       <div className="relative z-10 container mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ fontFamily: 'SATAM' }} className="text-6xl md:text-7xl font-bold mb-6 font-skeleta gothic-shadow">Proximos Rituais</h1>
-          <p className="text-xl text-gray-300 font-serif italic">"Onde as almas se encontram na escuridão"</p>
+          <h1
+            style={{ fontFamily: "SATAM" }}
+            className="text-6xl md:text-7xl font-bold mb-6 font-skeleta gothic-shadow"
+          >
+            Proximos Rituais
+          </h1>
+          <p className="text-xl text-gray-300 font-serif italic">
+            "Onde as almas se encontram na escuridão"
+          </p>
         </div>
 
         {/* Shows Grid */}
@@ -75,11 +101,15 @@ export default function ShowsPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-3">
                       <Calendar className="text-gray-400" size={24} />
-                      <span className="text-2xl font-bold text-gray-300 font-serif">{show.date}</span>
+                      <span className="text-2xl font-bold text-gray-300 font-serif">
+                        {show.date}
+                      </span>
                       <span className="text-lg text-gray-400">{show.time}</span>
                     </div>
 
-                    <h3 className="text-3xl font-bold text-white mb-2 font-serif">{show.venue}</h3>
+                    <h3 className="text-3xl font-bold text-white mb-2 font-serif">
+                      {show.venue}
+                    </h3>
 
                     <div className="flex items-center gap-2 text-gray-300">
                       <MapPin size={18} />
@@ -89,12 +119,13 @@ export default function ShowsPage() {
 
                   <div className="flex flex-col items-start md:items-end gap-4">
                     <div
-                      className={`px-4 py-2 rounded-full text-sm font-semibold ${show.status === "Últimos Ingressos"
-                        ? "bg-yellow-900/50 text-yellow-400 border border-yellow-600/50"
-                        : show.status === "Em Breve"
+                      className={`px-4 py-2 rounded-full text-sm font-semibold ${
+                        show.status === "Últimos Ingressos"
+                          ? "bg-yellow-900/50 text-yellow-400 border border-yellow-600/50"
+                          : show.status === "Em Breve"
                           ? "bg-gray-800/50 text-gray-400 border border-gray-600/50"
                           : "bg-gray-800/50 text-gray-300 border border-gray-600/50"
-                        }`}
+                      }`}
                     >
                       {show.status}
                     </div>
@@ -111,9 +142,7 @@ export default function ShowsPage() {
                       </Button>
                     ) : (
                       <Link href={`${show.link}`} target="_blank">
-                        <Button
-                          className="bg-purple-800 hover:bg-purple-700 text-white px-6 py-2 font-serif border border-purple-600 shadow-lg shadow-purple-900/50 transition-all duration-300 hover:shadow-purple-700/50"
-                        >
+                        <Button className="bg-purple-800 hover:bg-purple-700 text-white px-6 py-2 font-serif border border-purple-600 shadow-lg shadow-purple-900/50 transition-all duration-300 hover:shadow-purple-700/50">
                           <div className="flex items-center justify-center">
                             <Ticket size={18} className="mr-2" />
                             Ingressos
@@ -145,7 +174,9 @@ export default function ShowsPage() {
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute bottom-1/4 right-10 text-gray-600/20 text-4xl animate-pulse delay-1000">☽</div>
+      <div className="absolute bottom-1/4 right-10 text-gray-600/20 text-4xl animate-pulse delay-1000">
+        ☽
+      </div>
     </div>
-  )
+  );
 }

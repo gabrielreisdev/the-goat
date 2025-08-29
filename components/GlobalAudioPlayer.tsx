@@ -30,12 +30,14 @@ export default function GlobalAudioPlayer() {
       )}
       <audio
         ref={audioRef}
-        src="/depth.mp3"
         autoPlay={canPlay}
         loop
         controls={canPlay}
         style={{ display: "none" }}
-      />
+      >
+        <source src="/depth.mp3" type="audio/mp3" />
+        Seu navegador não suporta áudio HTML5.
+      </audio>
     </>
   );
 }
