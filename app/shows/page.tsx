@@ -5,6 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, MapPin, Ticket } from "lucide-react";
 import Link from "next/link";
 import BackgroundImage from "@/components/BackgroundImage";
+import { link } from "fs";
 
 export default function ShowsPage() {
   const shows = [
@@ -17,18 +18,20 @@ export default function ShowsPage() {
     //   status: "Ingressos Disponíveis",
     // },
     {
-      date: "À Definir",
+      date: "18/10/2025",
       venue: "Casa Noise",
       city: "Feira de Santana, BA",
-      // time: "22:00",
-      status: "Em Breve",
+      time: "21:00",
+      status: "Ingressos Disponíveis",
+      link: "https://www.sympla.com.br/evento/rock-cover-club-rito-das-sombras-ii/3156621",
     },
     {
-      date: "À Definir",
+      date: "25/10/2025",
       venue: "30 Segundos Bar",
       city: "Salvador, BA",
-      // time: "22:00",
-      status: "Em Breve",
+      time: "21:00",
+      status: "Ingressos Disponíveis",  
+      link: "https://partik.com.br/ghost-maneskin-e-nightwish-halloween"
     },
   ];
 
