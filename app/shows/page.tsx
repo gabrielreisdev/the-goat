@@ -18,21 +18,21 @@ export default function ShowsPage() {
     //   status: "Ingressos Disponíveis",
     // },
     {
-      date: "18/10/2025",
-      venue: "Casa Noise",
-      city: "Feira de Santana, BA",
-      time: "21:00",
-      status: "Ingressos Disponíveis",
-      link: "https://www.sympla.com.br/evento/rock-cover-club-rito-das-sombras-ii/3156621",
-    },
-    {
-      date: "25/10/2025",
+      date: "07/02/2026",
       venue: "30 Segundos Bar",
       city: "Salvador, BA",
       time: "21:00",
-      status: "Ingressos Disponíveis",  
-      link: "https://partik.com.br/ghost-maneskin-e-nightwish-halloween"
+      status: "Ingressos Disponíveis",
+      link: "https://partik.com.br/festa-do-milho",
     },
+    // {
+    //   date: "25/10/2025",
+    //   venue: "30 Segundos Bar",
+    //   city: "Salvador, BA",
+    //   time: "21:00",
+    //   status: "Ingressos Disponíveis",  
+    //   link: "https://partik.com.br/ghost-maneskin-e-nightwish-halloween"
+    // },
   ];
 
   return (
