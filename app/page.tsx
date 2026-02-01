@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import goatLogo from '../public/goat-logo.webp';
+import goatLogo from '../public/goat-logo-metalico.png';
 import Image from 'next/image';
 import Link from "next/link";
 import BackgroundImage from "@/components/BackgroundImage";

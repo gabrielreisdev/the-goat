@@ -9,6 +9,11 @@ export default function GaleriaPage() {
   const [filter, setFilter] = useState("Todos");
   const images = [
     {
+      src: "/ritual.jpeg?height=400&width=600",
+      alt: "Ritual",
+      category: "Art",
+    },
+    {
       src: "/noise.jpg?height=400&width=600",
       alt: "Show na Casa Noise",
       category: "Show",
