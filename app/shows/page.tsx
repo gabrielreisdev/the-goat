@@ -9,21 +9,13 @@ import { link } from "fs";
 
 export default function ShowsPage() {
   const shows = [
-    // {
-    //   link: "https://partik.com.br/ghost-e-soad",
-    //   date: "15 AGO 2025",
-    //   venue: "30 Segundos Bar",
-    //   city: "Salvador, BA",
-    //   time: "22:00",
-    //   status: "Ingressos Disponíveis",
-    // },
     {
-      date: "07/02/2026",
-      venue: "30 Segundos Bar",
+      date: "21/08/2026",
+      venue: "Casa da Felicidade",
       city: "Salvador, BA",
-      time: "21:00",
+      time: "22:00",
       status: "Ingressos Disponíveis",
-      link: "https://partik.com.br/festa-do-milho",
+      link: "https://loja.infinitepay.io/tickets_cf/xlt6248-slipknot-e-ghost",
     },
     // {
     //   date: "25/10/2025",
@@ -121,17 +113,17 @@ export default function ShowsPage() {
                   </div>
 
                   <div className="flex flex-col items-start md:items-end gap-4">
-                    <div
+                    {/* <div
                       className={`px-4 py-2 rounded-full text-sm font-semibold ${
                         show.status === "Últimos Ingressos"
                           ? "bg-yellow-900/50 text-yellow-400 border border-yellow-600/50"
                           : show.status === "Em Breve"
-                          ? "bg-gray-800/50 text-gray-400 border border-gray-600/50"
-                          : "bg-gray-800/50 text-gray-300 border border-gray-600/50"
+                            ? "bg-gray-800/50 text-gray-400 border border-gray-600/50"
+                            : "bg-gray-800/50 text-gray-300 border border-gray-600/50"
                       }`}
                     >
                       {show.status}
-                    </div>
+                    </div> */}
 
                     {show.status === "Em Breve" ? (
                       <Button
