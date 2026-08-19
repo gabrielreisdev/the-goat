@@ -53,7 +53,7 @@ const merchs = [
   {
     id: 'prequelle',
     title: 'Poster Satanized - Prequelle',
-    images: ['/prequelle.jpeg', '/prequelle.jpeg'],
+    images: ['/prequelle.jpg', '/prequelle.jpg'],
   },
   {
     id: 'impera',
