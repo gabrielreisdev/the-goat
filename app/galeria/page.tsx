@@ -1,7 +1,7 @@
 "use client";
 
-import Link from "next/link"
-import Image from 'next/image';
+import Link from "next/link";
+import Image from "next/image";
 import BackgroundImage from "@/components/BackgroundImage";
 import { useEffect, useState } from "react";
 
@@ -9,39 +9,41 @@ export default function GaleriaPage() {
   const [filter, setFilter] = useState("Todos");
   const images = [
     {
+      src: "/mimi.jpeg?height=400&width=600",
+      alt: "Ritual",
+      category: "Show",
+    },
+
+    {
       src: "/ritual.jpeg?height=400&width=600",
       alt: "Ritual",
       category: "Art",
     },
     {
-      src: "/noise.jpg?height=400&width=600",
-      alt: "Show na Casa Noise",
+      src: "/ghouls.jpeg?height=400&width=600",
+      alt: "Ritual",
       category: "Show",
     },
+    {
+      src: "/edu.jpeg?height=400&width=600",
+      alt: "Ritual",
+      category: "Show",
+    },
+    {
+      src: "/mimi2.jpeg?height=400&width=600",
+      alt: "Ritual",
+      category: "Show",
+    },
+    {
+      src: "/rudson.jpeg?height=400&width=600",
+      alt: "Ritual",
+      category: "Show",
+    },
+
     {
       src: "/13.jpg?height=400&width=600",
       alt: "Dia dos Namorados Macabro",
       category: "Show",
-    },
-    {
-      src: "/04.jpg?height=400&width=600",
-      alt: "Show na Casa da Felicidade",
-      category: "Show",
-    },
-    {
-      src: "/14.jpg?height=400&width=600",
-      alt: "Bastodpres",
-      category: "Bastidores",
-    },
-    {
-      src: "/6.jpg?height=400&width=600",
-      alt: "Bastidores",
-      category: "Bastidores",
-    },
-    {
-      src: "/8.jpg?height=400&width=600",
-      alt: "Bastidores",
-      category: "Bastidores",
     },
     {
       src: "/10.jpg?height=400&width=600",
@@ -59,29 +61,9 @@ export default function GaleriaPage() {
       category: "Bastidores",
     },
     {
-      src: "/7.jpg?height=400&width=600",
-      alt: "Bastidores",
-      category: "Bastidores",
-    },
-    {
       src: "/11.jpg?height=400&width=600",
       alt: "Bastidores",
       category: "Bastidores",
-    },
-    {
-      src: "/12.jpg?height=400&width=600",
-      alt: "Bastidores",
-      category: "Bastidores",
-    },
-    {
-      src: "/15.jpg?height=400&width=600",
-      alt: "Bastidores",
-      category: "Bastidores",
-    },
-    {
-      src: "/16.jpg?height=400&width=600",
-      alt: "Ensaio",
-      category: "Ensaio",
     },
     {
       src: "/17.jpg?height=400&width=600",
@@ -99,28 +81,26 @@ export default function GaleriaPage() {
       category: "Ensaio",
     },
     {
-      src: "/21.jpg?height=400&width=600",
-      alt: "Ensaio",
-      category: "Ensaio",
-    },
-    {
       src: "/19.jpg?height=400&width=600",
       alt: "Ensaio",
       category: "Ensaio",
     },
+  ];
 
-  ]
+  const filteredImages =
+    filter === "Todos"
+      ? images
+      : images.filter((img) => {
+          if (filter === "Ensaios") return img.category === "Ensaio";
+          if (filter === "Bastidores") return img.category === "Bastidores";
+          if (filter === "Shows") return img.category === "Show";
+          return true;
+        });
 
-  const filteredImages = filter === "Todos"
-    ? images
-    : images.filter((img) => {
-      if (filter === "Ensaios") return img.category === "Ensaio";
-      if (filter === "Bastidores") return img.category === "Bastidores";
-      if (filter === "Shows") return img.category === "Show";
-      return true;
-    });
-
-  const [modalImage, setModalImage] = useState<{ src: string, alt: string } | null>(null);
+  const [modalImage, setModalImage] = useState<{
+    src: string;
+    alt: string;
+  } | null>(null);
 
   useEffect(() => {
     if (!modalImage) return;
@@ -141,19 +121,34 @@ export default function GaleriaPage() {
       {/* Navigation */}
       <nav className="relative z-10 p-6 flex justify-center items-center border-b bg-black border-gray-800/30">
         <div className="flex gap-6">
-          <Link href="/" className="text-white hover:text-purple-500 transition-colors font-serif">
+          <Link
+            href="/"
+            className="text-white hover:text-purple-500 transition-colors font-serif"
+          >
             Início
           </Link>
-          <Link href="/shows" className="text-white hover:text-purple-500 transition-colors font-serif">
+          <Link
+            href="/shows"
+            className="text-white hover:text-purple-500 transition-colors font-serif"
+          >
             Shows
           </Link>
-          <Link href="/galeria" className="text-purple-600 font-serif font-bold">
+          <Link
+            href="/galeria"
+            className="text-purple-600 font-serif font-bold"
+          >
             Galeria
           </Link>
-          <Link href="/goaTV" className="text-white hover:text-purple-500 font-serif">
+          <Link
+            href="/goaTV"
+            className="text-white hover:text-purple-500 font-serif"
+          >
             GoaTV
           </Link>
-          <Link href="/merch" className="text-white hover:text-purple-500 font-serif">
+          <Link
+            href="/merch"
+            className="text-white hover:text-purple-500 font-serif"
+          >
             Merch
           </Link>
         </div>
@@ -162,8 +157,15 @@ export default function GaleriaPage() {
       <div className="relative z-10 container mx-auto px-6 py-12">
         {/* Header */}
         <div className="text-center mb-16">
-          <h1 style={{ fontFamily: 'SATAM' }} className="text-6xl md:text-7xl font-bold mb-6 font-skeleta gothic-shadow">Galeria Sombria</h1>
-          <p className="text-xl text-gray-300 font-serif italic">"Momentos capturados nas trevas do ritual"</p>
+          <h1
+            style={{ fontFamily: "SATAM" }}
+            className="text-6xl md:text-7xl font-bold mb-6 font-skeleta gothic-shadow"
+          >
+            Galeria Sombria
+          </h1>
+          <p className="text-xl text-gray-300 font-serif italic">
+            "Momentos capturados nas trevas do ritual"
+          </p>
         </div>
 
         {/* Filter buttons */}
@@ -217,11 +219,14 @@ export default function GaleriaPage() {
                 <div className="absolute bottom-0 left-0 right-0 p-6 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-white font-bold text-lg font-serif mb-1">{image.alt}</h3>
-                      <span className="text-gray-400 text-sm font-serif">{image.category}</span>
+                      <h3 className="text-white font-bold text-lg font-serif mb-1">
+                        {image.alt}
+                      </h3>
+                      <span className="text-gray-400 text-sm font-serif">
+                        {image.category}
+                      </span>
                     </div>
-                    <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center">
-                    </div>
+                    <div className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center"></div>
                   </div>
                 </div>
               </div>
@@ -237,7 +242,7 @@ export default function GaleriaPage() {
           >
             <div
               className="relative"
-              onClick={e => e.stopPropagation()} // Impede fechar ao clicar na imagem
+              onClick={(e) => e.stopPropagation()} // Impede fechar ao clicar na imagem
             >
               <img
                 src={modalImage.src}
@@ -267,5 +272,5 @@ export default function GaleriaPage() {
         </div>
       </div>
     </div>
-  )
+  );
 }
