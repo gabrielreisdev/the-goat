@@ -10,12 +10,12 @@ import { link } from "fs";
 export default function ShowsPage() {
   const shows = [
     {
-      date: "21/08/2026",
-      venue: "Casa da Felicidade",
+      date: "11/09/2026",
+      venue: "30 Segundos Bar",
       city: "Salvador, BA",
       time: "22:00",
       status: "Ingressos Disponíveis",
-      link: "https://loja.infinitepay.io/tickets_cf/xlt6248-slipknot-e-ghost",
+      link: "https://partik.com.br/ghost-e-iron-maiden",
     },
     // {
     //   date: "25/10/2025",

@@ -90,8 +90,8 @@ export default function MerchPage() {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background with overlay */}
+    <div className="min-h-screen bg-black text-white">
+      {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-gray-950/10 via-black to-black">
         <BackgroundImage />
       </div>
